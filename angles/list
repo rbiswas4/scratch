@@ -1,0 +1,12 @@
+profile galactic to equatorial method in coordutils/Astrometry.py vs astropy
+Try to change loop
+
+dsep
+
+rotationMatriXFromVectors`
+
+
+precession
+
+properMotion
+
