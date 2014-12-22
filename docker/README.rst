@@ -6,9 +6,10 @@ better idea to use a more upto-date package.
 
 did  not do what I expected. So I manually created the file 
 
->>> sudo vi /etc/apt/sources.list.d/docker.list 
+>> sudo vi /etc/apt/sources.list.d/docker.list 
+
 and inserted the following line
->>> deb https://get.docker.com/ubuntu docker main
+>> deb https://get.docker.com/ubuntu docker main
 
 I then ran 
 
