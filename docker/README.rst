@@ -57,3 +57,10 @@ To try something more ambitious, you can run an Ubuntu container with:
 For more examples and ideas, visit:
  http://docs.docker.com/userguide/
 
+-------------------------------------------------------------------------------
+Nothing else worked.
+-------------------------------------------------------------------------------
+
+Now starting instructions at http://flurdy.com/docs/docker/docker_osx_ubuntu.html
+
+Installed virtualbox
