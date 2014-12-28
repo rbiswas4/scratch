@@ -67,7 +67,7 @@ def dividearticlestofields(article):
 	return fields , divided
 
 
-fname = "PTtest.bib"
+fname = "CombinedJabrefListing.bib"
 articles =  getarticlesfrombib ( fname )
 for article in articles:
 	print article
