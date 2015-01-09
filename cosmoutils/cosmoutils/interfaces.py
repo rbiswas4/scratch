@@ -17,8 +17,8 @@ class FCPL (w0waCDM) :
     """
     class FCPL extends the functionality in `astropy.cosmology.w0waCDM` to
     to include linear theory results.
-    args :
-    -----
+    Parameters
+    ----------
     H0 : 
     Om0 : 
     Ob0 :
