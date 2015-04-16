@@ -1,0 +1,404 @@
+============================= test session starts ==============================
+platform darwin -- Python 2.7.9 -- py-1.4.25 -- pytest-2.6.3 -- /usr/local/manual/anaconda/bin/python
+collecting ... collected 28 items / 1 errors
+
+test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Cloning project
+· Discovering benchmarks
+·· Creating conda environment for py2.7
+·· Installing requirements for py2.7
+·· Installing into py2.7
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Discovering benchmarks
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Discovering benchmarks
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Discovering benchmarks
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Discovering benchmarks
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· No `environment_type` specified in asv.conf.json. This will be required in the future.
+· Discovering benchmarks
+·· Uninstalling from py2.7
+·· Building for py2.7
+·· Installing into py2.7
+· Benchmarking py2.7
+·· Running mem_examples.mem_list                                 2.4k
+·· Running params_examples.ParamSuite.track_value                  ok
+··· 
+              ======== ===
+               param1     
+              -------- ---
+                 a      1 
+                 b      2 
+                 c      3 
+              ======== ===
+
+·· Running params_examples.TuningTest.time_it                      ok
+··· 
+              ======== =========
+               param1           
+              -------- ---------
+                 1      17.00μs 
+                 2       6.00μs 
+              ======== =========
+
+·· Running params_examples.mem_param                               ok
+··· 
+              ======== ====== ======
+              --           depth    
+              -------- -------------
+               number    2      3   
+              ======== ====== ======
+                 10     208    208  
+                 20     296    296  
+              ======== ====== ======
+
+·· Running params_examples.time_skip                               ok
+··· 
+              ======== =========
+               param1           
+              -------- ---------
+                1000     9.27μs 
+                2000    20.20μs 
+                3000      n/a   
+              ======== =========
+
+·· Running params_examples.track_find_test                     failed
+··· 
+              ======== ========
+               param1          
+              -------- --------
+                 1      failed 
+                 2      failed 
+              ======== ========
+
+···· 
+               
+               For parameters: 1
+               Traceback (most recent call last):
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 685, in <module>
+                   result = benchmark.do_run()
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 405, in do_run
+                   return self.run(*self._current_params)
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 553, in run
+                   return self.func(*param)
+                 File "/Users/rbiswas/soft/asv/test/benchmark/params_examples.py", line 79, in track_find_test
+                   return asv_test_repo.dummy_value[n - 1]
+               TypeError: 'int' object has no attribute '__getitem__'
+               
+               For parameters: 2
+               Traceback (most recent call last):
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 685, in <module>
+                   result = benchmark.do_run()
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 405, in do_run
+                   return self.run(*self._current_params)
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 553, in run
+                   return self.func(*param)
+                 File "/Users/rbiswas/soft/asv/test/benchmark/params_examples.py", line 79, in track_find_test
+                   return asv_test_repo.dummy_value[n - 1]
+               TypeError: 'int' object has no attribute '__getitem__'
+
+·· Running params_examples.track_param                             ok
+··· 
+              ==================================== ====
+                             param1                    
+              ------------------------------------ ----
+               benchmark.params_examples.ClassOne   42 
+               benchmark.params_examples.ClassTwo   42 
+              ==================================== ====
+
+·· Running peakmem_examples.peakmem_list                          15M
+·· Running subdir.time_subdir.time_foo                        20.98μs
+·· Running ..._examples.TimeSuite.time_example_benchmark_1     8.08μs
+·· Running ..._examples.TimeSuite.time_example_benchmark_2    10.90μs
+·· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.04μs
+·· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.13μs
+·· Running time_examples.time_with_timeout                     failed
+···· asv: benchmark timed out (timeout 0.1s)
+               
+
+·· Running time_examples.time_with_warnings                    failed
+···· /Users/rbiswas/soft/asv/test/benchmark/time_examples.py:38: UserWarning: before
+                 warnings.warn('before')
+               Traceback (most recent call last):
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 685, in <module>
+                   result = benchmark.do_run()
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 405, in do_run
+                   return self.run(*self._current_params)
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 472, in run
+                   timing = timer.timeit(number)
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
+                   timing = self.inner(it, self.timer)
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
+                   _func()
+                 File "/Users/rbiswas/soft/asv/test/benchmark/time_examples.py", line 39, in time_with_warnings
+                   1 / 0
+               ZeroDivisionError: division by zerohi
+
+·· Running time_secondary.TimeSecondary.time_exception         failed
+···· Traceback (most recent call last):
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 685, in <module>
+                   result = benchmark.do_run()
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 405, in do_run
+                   return self.run(*self._current_params)
+                 File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 472, in run
+                   timing = timer.timeit(number)
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
+                   timing = self.inner(it, self.timer)
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
+                   _func()
+                 File "/Users/rbiswas/soft/asv/test/benchmark/time_secondary.py", line 26, in time_exception
+                   raise RuntimeError()
+               RuntimeError
+
+·· Running time_secondary.TimeSecondary.time_factorial         5.77μs
+···· XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+·· Running time_secondary.track_value                            42.0PASSED
+test/test_benchmarks.py::test_invalid_benchmark_tree PASSED
+test/test_benchmarks.py::test_table_formatting PASSED
+test/test_compare.py::test_compare PASSED
+test/test_conf.py::test_config PASSED
+test/test_conf.py::test_load_plugin Imported custom environment
+ExistingEnvironment
+Conda
+Virtualenv
+MyEnvironment
+PASSED
+test/test_dev.py::test_dev PASSED
+test/test_dev.py::test_run_python_same PASSED
+test/test_dev.py::test_profile_python_same PASSED
+test/test_dev.py::test_dev_python_arg PASSED
+test/test_dev.py::test_run_steps_arg PASSED
+test/test_graph.py::test_graph_single PASSED
+test/test_graph.py::test_graph_multi PASSED
+test/test_graph.py::test_empty_graph PASSED
+test/test_graph.py::test_nan PASSED
+test/test_machine.py::test_machine 
+[305.56%] · No information stored about machine 'orangutan'. I know about nothing.
+            
+PASSED
+test/test_publish.py::test_publish 
+[1120.00%] · Loading machine info
+[1140.00%] · Getting tags and branches
+[1140.00%] ·· Cloning project
+[1140.00%] ·· Fetching recent changes
+[1160.00%] · Loading results
+[1180.00%] · Generating graphs
+[1200.00%] · Writing index
+[1220.00%] · Loading machine info
+[1240.00%] · Getting tags and branches
+[1240.00%] ·· Fetching recent changes
+[1260.00%] · Loading results
+[1280.00%] · Generating graphs
+[1300.00%] · Writing indexPASSED
+test/test_quickstart.py::test_quickstart 
+[1300.00%] · Edit asv.conf.json to get started.PASSED
+test/test_repo.py::test_repo_git 
+[1300.00%] · Cloning projectPASSED
+test/test_repo.py::test_repo_hg xfail
+test/test_results.py::test_results PASSED
+test/test_rm.py::test_rm 
+[1300.00%] · Removing 185 benchmarks in 37 files
+[1300.00%] · Removing 1 filesPASSED
+test/test_subprocess.py::test_timeout 
+[1300.00%] · Error running /usr/local/manual/anaconda/bin/python -c 
+            import sys
+            import time
+            
+            sys.stdout.write("Stdout before waiting\n")
+            sys.stderr.write("Stderr before waiting\n")
+            sys.stdout.flush()
+            sys.stderr.flush()
+            time.sleep(60)
+            sys.stdout.write("Stdout after waiting\n")
+            sys.stderr.write("Stderr after waiting\n")
+            
+            STDOUT -------->
+            Stdout before waiting
+            STDERR -------->
+            Stderr before waiting
+Stdout before waiting
+
+
+[1300.00%] · Error running /usr/local/manual/anaconda/bin/python -c 
+            import sys
+            import time
+            import subprocess
+            
+            sys.stdout.write("Stdout before waiting\n")
+            sys.stderr.write("Stderr before waiting\n")
+            sys.stdout.flush()
+            sys.stderr.flush()
+            subprocess.call([sys.executable, "-c",
+                "import sys, subprocess; subprocess.call([sys.executable, '-c', 'import time; time.sleep(60)'])"])
+            sys.stdout.write("Stdout after waiting\n")
+            sys.stderr.write("Stderr after waiting\n")
+            
+            STDOUT -------->
+            Stdout before waiting
+            STDERR -------->
+            Stderr before waiting
+Stdout before waiting
+
+PASSED
+test/test_subprocess.py::test_exception 
+[1300.00%] · Error running /usr/local/manual/anaconda/bin/python -c 
+            import sys
+            sys.stdout.write("Stdout before error\n")
+            sys.stderr.write("Stderr before error\n")
+            sys.exit(1)
+            
+            STDOUT -------->
+            Stdout before error
+            STDERR -------->
+            Stderr before error
+PASSED
+test/test_workflow.py::test_run_publish 
+[2760.00%] · Loading machine info
+[2780.00%] · Getting tags and branches
+[2780.00%] ·· Fetching recent changes
+[2800.00%] · Loading results
+[2820.00%] · Generating graphs
+[2840.00%] · Writing index
+[397.22%] · Fetching recent changes
+[397.22%] · Getting existing hashes
+[397.22%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[397.22%] · Creating environments
+[397.22%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[397.22%] · Discovering benchmarks
+[397.22%] ·· Uninstalling from py2.7-psutil1.2-six
+[397.22%] ·· Building for py2.7-psutil1.2-six
+[397.22%] ·· Installing into py2.7-psutil1.2-six
+[397.22%] · Running 72 total benchmarks (2 commits * 2 environments * 18 benchmarks)
+[397.22%] · For asv commit hash 1bbd7b1b:
+[397.22%] ·· Building for py2.7-psutil1.2-six
+[397.22%] ·· Benchmarking py2.7-psutil1.2-six
+[398.61%] ··· Running mem_examples.mem_list                                 2.4k
+[400.00%] ··· Running params_examples.ParamSuite.track_value               1;...
+[401.39%] ··· Running params_examples.TuningTest.time_it             16.00μs;...
+[402.78%] ··· Running params_examples.mem_param                         208 ;...
+[404.17%] ··· Running params_examples.time_skip                      10.51μs;...
+[405.56%] ··· Running params_examples.track_find_test                      6;...
+[406.94%] ··· Running params_examples.track_param                         42;...
+[408.33%] ··· Running peakmem_examples.peakmem_list                          15M
+[409.72%] ··· Running subdir.time_subdir.time_foo                        20.46μs
+[411.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.46μs
+[412.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.83μs
+[413.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.95μs
+[415.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.74μs
+[416.67%] ··· Running time_examples.time_with_timeout                     failed
+[418.06%] ··· Running time_examples.time_with_warnings                    failed
+[419.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[420.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.75μs
+[422.22%] ··· Running time_secondary.track_value                            42.0
+[422.22%] ·· Building for py2.7-psutil2.1-six
+[422.22%] ·· Benchmarking py2.7-psutil2.1-six
+[423.61%] ··· Running mem_examples.mem_list                                 2.4k
+[425.00%] ··· Running params_examples.ParamSuite.track_value               1;...
+[426.39%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[427.78%] ··· Running params_examples.mem_param                         208 ;...
+[429.17%] ··· Running params_examples.time_skip                      11.73μs;...
+[430.56%] ··· Running params_examples.track_find_test                      6;...
+[431.94%] ··· Running params_examples.track_param                         42;...
+[433.33%] ··· Running peakmem_examples.peakmem_list                          15M
+[434.72%] ··· Running subdir.time_subdir.time_foo                        20.61μs
+[436.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.58μs
+[437.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.32μs
+[438.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.92μs
+[440.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.31μs
+[441.67%] ··· Running time_examples.time_with_timeout                     failed
+[443.06%] ··· Running time_examples.time_with_warnings                    failed
+[444.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[445.83%] ··· Running time_secondary.TimeSecondary.time_factorial         6.43μs
+[447.22%] ··· Running time_secondary.track_value                            42.0
+[447.22%] · For asv commit hash c6bff396:
+[447.22%] ·· Building for py2.7-psutil1.2-six
+[447.22%] ·· Benchmarking py2.7-psutil1.2-six
+[448.61%] ··· Running mem_examples.mem_list                                 2.4k
+[450.00%] ··· Running params_examples.ParamSuite.track_value               1;...
+[451.39%] ··· Running params_examples.TuningTest.time_it             13.00μs;...
+[452.78%] ··· Running params_examples.mem_param                         208 ;...
+[454.17%] ··· Running params_examples.time_skip                       9.28μs;...
+[455.56%] ··· Running params_examples.track_find_test                      6;...
+[456.94%] ··· Running params_examples.track_param                         42;...
+[458.33%] ··· Running peakmem_examples.peakmem_list                          15M
+[459.72%] ··· Running subdir.time_subdir.time_foo                        20.24μs
+[461.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.24μs
+[462.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.91μs
+[463.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.39μs
+[465.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.82μs
+[466.67%] ··· Running time_examples.time_with_timeout                     failed
+[468.06%] ··· Running time_examples.time_with_warnings                    failed
+[469.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[470.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.76μs
+[472.22%] ··· Running time_secondary.track_value                            42.0
+[472.22%] ·· Building for py2.7-psutil2.1-six
+[472.22%] ·· Benchmarking py2.7-psutil2.1-six
+[473.61%] ··· Running mem_examples.mem_list                                 2.4k
+[475.00%] ··· Running params_examples.ParamSuite.track_value               1;...
+[476.39%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[477.78%] ··· Running params_examples.mem_param                         208 ;...
+[479.17%] ··· Running params_examples.time_skip                       9.34μs;...
+[480.56%] ··· Running params_examples.track_find_test                      6;...
+[481.94%] ··· Running params_examples.track_param                         42;...
+[483.33%] ··· Running peakmem_examples.peakmem_list                          15M
+[484.72%] ··· Running subdir.time_subdir.time_foo                        21.46μs
+[486.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.08μs
+[487.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    12.77μs
+[488.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.85μs
+[490.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.76μs
+[491.67%] ··· Running time_examples.time_with_timeout                     failed
+[493.06%] ··· Running time_examples.time_with_warnings                    failed
+[494.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[495.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.95μs
+[497.22%] ··· Running time_secondary.track_value                            42.0
+[7160.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[7160.00%] · Discovering benchmarks
+[7160.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[7160.00%] ·· Building for py2.7-psutil1.2-six
+[7160.00%] ·· Installing into py2.7-psutil1.2-six
+[7180.00%] · Loading machine info
+[7200.00%] · Getting tags and branches
+[7200.00%] ·· Fetching recent changes
+[7220.00%] · Loading results
+[7240.00%] · Generating graphs
+[7260.00%] · Writing indexPASSED
+test/test_workflow.py::test_continuous PASSED
+test/test_workflow.py::test_find Traceback (most recent call last):
+  File "/Users/rbiswas/soft/asv/asv/commands/setup.py", line 20, in _create
+    env.create()
+  File "/Users/rbiswas/soft/asv/asv/environment.py", line 278, in create
+    self._setup()
+  File "/Users/rbiswas/soft/asv/asv/plugins/conda.py", line 101, in _setup
+    'pip'])
+  File "/Users/rbiswas/soft/asv/asv/util.py", line 231, in check_call
+    cwd=cwd)
+  File "/Users/rbiswas/soft/asv/asv/util.py", line 400, in check_output
+    raise ProcessError(args, retcode, stdout, stderr)
+ProcessError: Command '/usr/local/manual/anaconda/bin/conda create --yes -p /private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find0/env/51ea1b41623d668554f676f8b747c3c1 --use-index-cache python=2.7 pip' returned non-zero exit status 1
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/local/manual/anaconda/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/local/manual/anaconda/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/manual/anaconda/lib/python2.7/multiprocessing/pool.py", line 380, in _handle_results
+    task = get()
+TypeError: ('__init__() takes exactly 5 arguments (9 given)', <class 'asv.util.ProcessError'>, (u'/usr/local/manual/anaconda/bin/conda', u'create', u'--yes', u'-p', u'/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find0/env/51ea1b41623d668554f676f8b747c3c1', u'--use-index-cache', u'python=2.7', u'pip'))
+
