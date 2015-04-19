@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
 platform darwin -- Python 2.7.9 -- py-1.4.25 -- pytest-2.6.3 -- /usr/local/manual/anaconda/bin/python
-collecting ... collected 28 items / 1 errors
+collecting ... collected 30 items / 1 errors
 
 test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified in asv.conf.json. This will be required in the future.
 · Cloning project
@@ -54,8 +54,8 @@ test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified
               ======== =========
                param1           
               -------- ---------
-                 1      17.00μs 
-                 2       6.00μs 
+                 1      16.00μs 
+                 2       4.00μs 
               ======== =========
 
 ·· Running params_examples.mem_param                               ok
@@ -74,8 +74,8 @@ test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified
               ======== =========
                param1           
               -------- ---------
-                1000     9.27μs 
-                2000    20.20μs 
+                1000     9.35μs 
+                2000    18.60μs 
                 3000      n/a   
               ======== =========
 
@@ -124,11 +124,11 @@ test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified
               ==================================== ====
 
 ·· Running peakmem_examples.peakmem_list                          15M
-·· Running subdir.time_subdir.time_foo                        20.98μs
-·· Running ..._examples.TimeSuite.time_example_benchmark_1     8.08μs
+·· Running subdir.time_subdir.time_foo                        21.46μs
+·· Running ..._examples.TimeSuite.time_example_benchmark_1     8.09μs
 ·· Running ..._examples.TimeSuite.time_example_benchmark_2    10.90μs
-·· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.04μs
-·· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.13μs
+·· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.62μs
+·· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.77μs
 ·· Running time_examples.time_with_timeout                     failed
 ···· asv: benchmark timed out (timeout 0.1s)
                
@@ -143,9 +143,9 @@ test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified
                    return self.run(*self._current_params)
                  File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 472, in run
                    timing = timer.timeit(number)
-                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-1/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
                    timing = self.inner(it, self.timer)
-                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-1/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
                    _func()
                  File "/Users/rbiswas/soft/asv/test/benchmark/time_examples.py", line 39, in time_with_warnings
                    1 / 0
@@ -159,15 +159,15 @@ test/test_benchmarks.py::test_find_benchmarks · No `environment_type` specified
                    return self.run(*self._current_params)
                  File "/Users/rbiswas/soft/asv/asv/benchmark.py", line 472, in run
                    timing = timer.timeit(number)
-                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-1/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 195, in timeit
                    timing = self.inner(it, self.timer)
-                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
+                 File "/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-1/test_find_benchmarks0/env/c5c8254c325ed25acf82fa3dc41e4b0c/lib/python2.7/timeit.py", line 100, in inner
                    _func()
                  File "/Users/rbiswas/soft/asv/test/benchmark/time_secondary.py", line 26, in time_exception
                    raise RuntimeError()
                RuntimeError
 
-·· Running time_secondary.TimeSecondary.time_factorial         5.77μs
+·· Running time_secondary.TimeSecondary.time_factorial         5.85μs
 ···· XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ·· Running time_secondary.track_value                            42.0PASSED
 test/test_benchmarks.py::test_invalid_benchmark_tree PASSED
@@ -269,6 +269,8 @@ test/test_subprocess.py::test_exception
             STDERR -------->
             Stderr before error
 PASSED
+test/test_util.py::test_parallelfailure PASSED
+test/test_web.py::test_web_smoketest SKIPPED
 test/test_workflow.py::test_run_publish 
 [2760.00%] · Loading machine info
 [2780.00%] · Getting tags and branches
@@ -286,87 +288,87 @@ test/test_workflow.py::test_run_publish
 [397.22%] ·· Building for py2.7-psutil1.2-six
 [397.22%] ·· Installing into py2.7-psutil1.2-six
 [397.22%] · Running 72 total benchmarks (2 commits * 2 environments * 18 benchmarks)
-[397.22%] · For asv commit hash 1bbd7b1b:
+[397.22%] · For asv commit hash 4574d6e0:
 [397.22%] ·· Building for py2.7-psutil1.2-six
 [397.22%] ·· Benchmarking py2.7-psutil1.2-six
 [398.61%] ··· Running mem_examples.mem_list                                 2.4k
 [400.00%] ··· Running params_examples.ParamSuite.track_value               1;...
 [401.39%] ··· Running params_examples.TuningTest.time_it             16.00μs;...
 [402.78%] ··· Running params_examples.mem_param                         208 ;...
-[404.17%] ··· Running params_examples.time_skip                      10.51μs;...
+[404.17%] ··· Running params_examples.time_skip                       9.36μs;...
 [405.56%] ··· Running params_examples.track_find_test                      6;...
 [406.94%] ··· Running params_examples.track_param                         42;...
 [408.33%] ··· Running peakmem_examples.peakmem_list                          15M
-[409.72%] ··· Running subdir.time_subdir.time_foo                        20.46μs
-[411.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.46μs
-[412.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.83μs
-[413.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.95μs
-[415.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.74μs
+[409.72%] ··· Running subdir.time_subdir.time_foo                        20.21μs
+[411.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.73μs
+[412.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.78μs
+[413.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.84μs
+[415.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.87μs
 [416.67%] ··· Running time_examples.time_with_timeout                     failed
 [418.06%] ··· Running time_examples.time_with_warnings                    failed
 [419.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
-[420.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.75μs
+[420.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.82μs
 [422.22%] ··· Running time_secondary.track_value                            42.0
 [422.22%] ·· Building for py2.7-psutil2.1-six
 [422.22%] ·· Benchmarking py2.7-psutil2.1-six
 [423.61%] ··· Running mem_examples.mem_list                                 2.4k
 [425.00%] ··· Running params_examples.ParamSuite.track_value               1;...
-[426.39%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[426.39%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
 [427.78%] ··· Running params_examples.mem_param                         208 ;...
-[429.17%] ··· Running params_examples.time_skip                      11.73μs;...
+[429.17%] ··· Running params_examples.time_skip                       9.35μs;...
 [430.56%] ··· Running params_examples.track_find_test                      6;...
 [431.94%] ··· Running params_examples.track_param                         42;...
 [433.33%] ··· Running peakmem_examples.peakmem_list                          15M
-[434.72%] ··· Running subdir.time_subdir.time_foo                        20.61μs
-[436.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.58μs
-[437.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.32μs
-[438.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.92μs
-[440.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.31μs
+[434.72%] ··· Running subdir.time_subdir.time_foo                        20.07μs
+[436.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.76μs
+[437.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.90μs
+[438.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.76μs
+[440.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.70μs
 [441.67%] ··· Running time_examples.time_with_timeout                     failed
 [443.06%] ··· Running time_examples.time_with_warnings                    failed
 [444.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
-[445.83%] ··· Running time_secondary.TimeSecondary.time_factorial         6.43μs
+[445.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
 [447.22%] ··· Running time_secondary.track_value                            42.0
-[447.22%] · For asv commit hash c6bff396:
+[447.22%] · For asv commit hash 9ca5b3b7:
 [447.22%] ·· Building for py2.7-psutil1.2-six
 [447.22%] ·· Benchmarking py2.7-psutil1.2-six
 [448.61%] ··· Running mem_examples.mem_list                                 2.4k
 [450.00%] ··· Running params_examples.ParamSuite.track_value               1;...
 [451.39%] ··· Running params_examples.TuningTest.time_it             13.00μs;...
 [452.78%] ··· Running params_examples.mem_param                         208 ;...
-[454.17%] ··· Running params_examples.time_skip                       9.28μs;...
+[454.17%] ··· Running params_examples.time_skip                       9.59μs;...
 [455.56%] ··· Running params_examples.track_find_test                      6;...
 [456.94%] ··· Running params_examples.track_param                         42;...
 [458.33%] ··· Running peakmem_examples.peakmem_list                          15M
-[459.72%] ··· Running subdir.time_subdir.time_foo                        20.24μs
-[461.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.24μs
-[462.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.91μs
-[463.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.39μs
-[465.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.82μs
+[459.72%] ··· Running subdir.time_subdir.time_foo                        20.04μs
+[461.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.71μs
+[462.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.69μs
+[463.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.93μs
+[465.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.83μs
 [466.67%] ··· Running time_examples.time_with_timeout                     failed
 [468.06%] ··· Running time_examples.time_with_warnings                    failed
 [469.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
-[470.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.76μs
+[470.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
 [472.22%] ··· Running time_secondary.track_value                            42.0
 [472.22%] ·· Building for py2.7-psutil2.1-six
 [472.22%] ·· Benchmarking py2.7-psutil2.1-six
 [473.61%] ··· Running mem_examples.mem_list                                 2.4k
 [475.00%] ··· Running params_examples.ParamSuite.track_value               1;...
-[476.39%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[476.39%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
 [477.78%] ··· Running params_examples.mem_param                         208 ;...
-[479.17%] ··· Running params_examples.time_skip                       9.34μs;...
+[479.17%] ··· Running params_examples.time_skip                       9.39μs;...
 [480.56%] ··· Running params_examples.track_find_test                      6;...
 [481.94%] ··· Running params_examples.track_param                         42;...
 [483.33%] ··· Running peakmem_examples.peakmem_list                          15M
-[484.72%] ··· Running subdir.time_subdir.time_foo                        21.46μs
-[486.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.08μs
-[487.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    12.77μs
-[488.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.85μs
-[490.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.76μs
+[484.72%] ··· Running subdir.time_subdir.time_foo                        20.13μs
+[486.11%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.76μs
+[487.50%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.78μs
+[488.89%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.73μs
+[490.28%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.68μs
 [491.67%] ··· Running time_examples.time_with_timeout                     failed
 [493.06%] ··· Running time_examples.time_with_warnings                    failed
 [494.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
-[495.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.95μs
+[495.83%] ··· Running time_secondary.TimeSecondary.time_factorial         5.82μs
 [497.22%] ··· Running time_secondary.track_value                            42.0
 [7160.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
 [7160.00%] · Discovering benchmarks
@@ -380,25 +382,436 @@ test/test_workflow.py::test_run_publish
 [7240.00%] · Generating graphs
 [7260.00%] · Writing indexPASSED
 test/test_workflow.py::test_continuous PASSED
-test/test_workflow.py::test_find Traceback (most recent call last):
-  File "/Users/rbiswas/soft/asv/asv/commands/setup.py", line 20, in _create
-    env.create()
-  File "/Users/rbiswas/soft/asv/asv/environment.py", line 278, in create
-    self._setup()
-  File "/Users/rbiswas/soft/asv/asv/plugins/conda.py", line 101, in _setup
-    'pip'])
-  File "/Users/rbiswas/soft/asv/asv/util.py", line 231, in check_call
-    cwd=cwd)
-  File "/Users/rbiswas/soft/asv/asv/util.py", line 400, in check_output
-    raise ProcessError(args, retcode, stdout, stderr)
-ProcessError: Command '/usr/local/manual/anaconda/bin/conda create --yes -p /private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find0/env/51ea1b41623d668554f676f8b747c3c1 --use-index-cache python=2.7 pip' returned non-zero exit status 1
-Exception in thread Thread-3:
-Traceback (most recent call last):
-  File "/usr/local/manual/anaconda/lib/python2.7/threading.py", line 810, in __bootstrap_inner
-    self.run()
-  File "/usr/local/manual/anaconda/lib/python2.7/threading.py", line 763, in run
-    self.__target(*self.__args, **self.__kwargs)
-  File "/usr/local/manual/anaconda/lib/python2.7/multiprocessing/pool.py", line 380, in _handle_results
-    task = get()
-TypeError: ('__init__() takes exactly 5 arguments (9 given)', <class 'asv.util.ProcessError'>, (u'/usr/local/manual/anaconda/bin/conda', u'create', u'--yes', u'-p', u'/private/var/folders/0s/vtwqnbh90bgct15f15rmrygw0000gn/T/pytest-5/test_find0/env/51ea1b41623d668554f676f8b747c3c1', u'--use-index-cache', u'python=2.7', u'pip'))
+test/test_workflow.py::test_find PASSED
+test/test_workflow.py::test_run_new_all 
+[609.72%] · Cloning project
+[609.72%] · Fetching recent changes
+[609.72%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[609.72%] · Creating environments
+[609.72%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[609.72%] · Discovering benchmarks
+[609.72%] ·· Uninstalling from py2.7-psutil1.2-six
+[609.72%] ·· Building for py2.7-psutil1.2-six
+[609.72%] ·· Installing into py2.7-psutil1.2-six
+[609.72%] · Running 2 total benchmarks (1 commits * 2 environments * 1 benchmarks)
+[21950.00%] · For asv commit hash 7ead27ae:
+[21950.00%] ·· Building for py2.7-psutil1.2-six
+[21950.00%] ·· Benchmarking py2.7-psutil1.2-six
+[22000.00%] ··· Running time_secondary.track_value                            42.0
+[22000.00%] ·· Building for py2.7-psutil2.1-six
+[22000.00%] ·· Benchmarking py2.7-psutil2.1-six
+[22050.00%] ··· Running time_secondary.track_value                            42.0
+[22050.00%] · Fetching recent changes
+[22050.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[22050.00%] · Creating environments
+[22050.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[22050.00%] · Discovering benchmarks
+[22050.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[22050.00%] ·· Installing into py2.7-psutil1.2-six
+[22050.00%] · Running 36 total benchmarks (1 commits * 2 environments * 18 benchmarks)
+[1225.00%] · For asv commit hash dfa64edd:
+[1225.00%] ·· Building for py2.7-psutil1.2-six
+[1225.00%] ·· Benchmarking py2.7-psutil1.2-six
+[1227.78%] ··· Running mem_examples.mem_list                                 2.4k
+[1230.56%] ··· Running params_examples.ParamSuite.track_value               1;...
+[1233.33%] ··· Running params_examples.TuningTest.time_it             17.00μs;...
+[1236.11%] ··· Running params_examples.mem_param                         208 ;...
+[1238.89%] ··· Running params_examples.time_skip                       9.77μs;...
+[1241.67%] ··· Running params_examples.track_find_test                     failed
+[1244.44%] ··· Running params_examples.track_param                         42;...
+[1247.22%] ··· Running peakmem_examples.peakmem_list                          15M
+[1250.00%] ··· Running subdir.time_subdir.time_foo                        20.25μs
+[1252.78%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.79μs
+[1255.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.98μs
+[1258.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.79μs
+[1261.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.05μs
+[1263.89%] ··· Running time_examples.time_with_timeout                     failed
+[1266.67%] ··· Running time_examples.time_with_warnings                    failed
+[1269.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[1272.22%] ··· Running time_secondary.TimeSecondary.time_factorial         5.80μs
+[1275.00%] ··· Running time_secondary.track_value                            42.0
+[1275.00%] ·· Building for py2.7-psutil2.1-six
+[1275.00%] ·· Benchmarking py2.7-psutil2.1-six
+[1277.78%] ··· Running mem_examples.mem_list                                 2.4k
+[1280.56%] ··· Running params_examples.ParamSuite.track_value               1;...
+[1283.33%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[1286.11%] ··· Running params_examples.mem_param                         208 ;...
+[1288.89%] ··· Running params_examples.time_skip                       9.22μs;...
+[1291.67%] ··· Running params_examples.track_find_test                     failed
+[1294.44%] ··· Running params_examples.track_param                         42;...
+[1297.22%] ··· Running peakmem_examples.peakmem_list                          15M
+[1300.00%] ··· Running subdir.time_subdir.time_foo                        20.29μs
+[1302.78%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.77μs
+[1305.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.69μs
+[1308.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.89μs
+[1311.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.70μs
+[1313.89%] ··· Running time_examples.time_with_timeout                     failed
+[1316.67%] ··· Running time_examples.time_with_warnings                    failed
+[1319.44%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[1322.22%] ··· Running time_secondary.TimeSecondary.time_factorial         5.82μs
+[1325.00%] ··· Running time_secondary.track_value                            42.0
+[1325.00%] · Fetching recent changes
+[1325.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[1325.00%] · Creating environments
+[1325.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[1325.00%] · Discovering benchmarks
+[1325.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[1325.00%] ·· Installing into py2.7-psutil1.2-six
+[1325.00%] · Running 2 total benchmarks (1 commits * 2 environments * 1 benchmarks)
+[23850.00%] · For asv commit hash 7ead27ae:
+[23850.00%] ·· Building for py2.7-psutil1.2-six
+[23850.00%] ·· Benchmarking py2.7-psutil1.2-six
+[23900.00%] ··· Running time_secondary.track_value                            42.0
+[23900.00%] ·· Building for py2.7-psutil2.1-six
+[23900.00%] ·· Benchmarking py2.7-psutil2.1-six
+[23950.00%] ··· Running time_secondary.track_value                            42.0
+[23950.00%] · Fetching recent changes
+[23950.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[23950.00%] · Creating environments
+[23950.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[23950.00%] · Discovering benchmarks
+[23950.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[23950.00%] ·· Installing into py2.7-psutil1.2-six
+[23950.00%] · Running 72 total benchmarks (2 commits * 2 environments * 18 benchmarks)
+[665.28%] · For asv commit hash dfa64edd:
+[665.28%] ·· Building for py2.7-psutil1.2-six
+[665.28%] ·· Benchmarking py2.7-psutil1.2-six
+[666.67%] ··· Running mem_examples.mem_list                                 2.4k
+[668.06%] ··· Running params_examples.ParamSuite.track_value               1;...
+[669.44%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[670.83%] ··· Running params_examples.mem_param                         208 ;...
+[672.22%] ··· Running params_examples.time_skip                      10.93μs;...
+[673.61%] ··· Running params_examples.track_find_test                     failed
+[675.00%] ··· Running params_examples.track_param                         42;...
+[676.39%] ··· Running peakmem_examples.peakmem_list                          15M
+[677.78%] ··· Running subdir.time_subdir.time_foo                        19.97μs
+[679.17%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.74μs
+[680.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.18μs
+[681.94%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.77μs
+[683.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.99μs
+[684.72%] ··· Running time_examples.time_with_timeout                     failed
+[686.11%] ··· Running time_examples.time_with_warnings                    failed
+[687.50%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[688.89%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
+[690.28%] ··· Running time_secondary.track_value                            42.0
+[690.28%] ·· Building for py2.7-psutil2.1-six
+[690.28%] ·· Benchmarking py2.7-psutil2.1-six
+[691.67%] ··· Running mem_examples.mem_list                                 2.4k
+[693.06%] ··· Running params_examples.ParamSuite.track_value               1;...
+[694.44%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[695.83%] ··· Running params_examples.mem_param                         208 ;...
+[697.22%] ··· Running params_examples.time_skip                       9.37μs;...
+[698.61%] ··· Running params_examples.track_find_test                     failed
+[700.00%] ··· Running params_examples.track_param                         42;...
+[701.39%] ··· Running peakmem_examples.peakmem_list                          15M
+[702.78%] ··· Running subdir.time_subdir.time_foo                        20.08μs
+[704.17%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.74μs
+[705.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.82μs
+[706.94%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.97μs
+[708.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.87μs
+[709.72%] ··· Running time_examples.time_with_timeout                     failed
+[711.11%] ··· Running time_examples.time_with_warnings                    failed
+[712.50%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[713.89%] ··· Running time_secondary.TimeSecondary.time_factorial         5.80μs
+[715.28%] ··· Running time_secondary.track_value                            42.0
+[715.28%] · For asv commit hash 7ead27ae:
+[715.28%] ·· Building for py2.7-psutil1.2-six
+[715.28%] ·· Benchmarking py2.7-psutil1.2-six
+[716.67%] ··· Running mem_examples.mem_list                                 2.4k
+[718.06%] ··· Running params_examples.ParamSuite.track_value               1;...
+[719.44%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[720.83%] ··· Running params_examples.mem_param                         208 ;...
+[722.22%] ··· Running params_examples.time_skip                       9.20μs;...
+[723.61%] ··· Running params_examples.track_find_test                     failed
+[725.00%] ··· Running params_examples.track_param                         42;...
+[726.39%] ··· Running peakmem_examples.peakmem_list                          15M
+[727.78%] ··· Running subdir.time_subdir.time_foo                        21.29μs
+[729.17%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.05μs
+[730.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.16μs
+[731.94%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.95μs
+[733.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.73μs
+[734.72%] ··· Running time_examples.time_with_timeout                     failed
+[736.11%] ··· Running time_examples.time_with_warnings                    failed
+[737.50%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[738.89%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
+[740.28%] ··· Running time_secondary.track_value                            42.0
+[740.28%] ·· Building for py2.7-psutil2.1-six
+[740.28%] ·· Benchmarking py2.7-psutil2.1-six
+[741.67%] ··· Running mem_examples.mem_list                                 2.4k
+[743.06%] ··· Running params_examples.ParamSuite.track_value               1;...
+[744.44%] ··· Running params_examples.TuningTest.time_it             13.00μs;...
+[745.83%] ··· Running params_examples.mem_param                         208 ;...
+[747.22%] ··· Running params_examples.time_skip                       9.54μs;...
+[748.61%] ··· Running params_examples.track_find_test                     failed
+[750.00%] ··· Running params_examples.track_param                         42;...
+[751.39%] ··· Running peakmem_examples.peakmem_list                          15M
+[752.78%] ··· Running subdir.time_subdir.time_foo                        21.15μs
+[754.17%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.53μs
+[755.56%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.28μs
+[756.94%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.32μs
+[758.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.81μs
+[759.72%] ··· Running time_examples.time_with_timeout                     failed
+[761.11%] ··· Running time_examples.time_with_warnings                    failed
+[762.50%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[763.89%] ··· Running time_secondary.TimeSecondary.time_factorial         6.11μs
+[765.28%] ··· Running time_secondary.track_value                            42.0
+[765.28%] · Fetching recent changes
+[765.28%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[765.28%] · Creating environments
+[765.28%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[765.28%] · Discovering benchmarks
+[765.28%] ·· Uninstalling from py2.7-psutil1.2-six
+[765.28%] ·· Installing into py2.7-psutil1.2-six
+[765.28%] · Running 2 total benchmarks (1 commits * 2 environments * 1 benchmarks)
+[27550.00%] · For asv commit hash 7ead27ae:
+[27550.00%] ·· Building for py2.7-psutil1.2-six
+[27550.00%] ·· Benchmarking py2.7-psutil1.2-six
+[27600.00%] ··· Running time_secondary.track_value                            42.0
+[27600.00%] ·· Building for py2.7-psutil2.1-six
+[27600.00%] ·· Benchmarking py2.7-psutil2.1-six
+[27650.00%] ··· Running time_secondary.track_value                            42.0
+[27650.00%] · Fetching recent changes
+[27650.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[27650.00%] · Creating environments
+[27650.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[27650.00%] · Discovering benchmarks
+[27650.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[27650.00%] ·· Installing into py2.7-psutil1.2-six
+[27650.00%] · Running 72 total benchmarks (2 commits * 2 environments * 18 benchmarks)
+[768.06%] · For asv commit hash dfa64edd:
+[768.06%] ·· Building for py2.7-psutil1.2-six
+[768.06%] ·· Benchmarking py2.7-psutil1.2-six
+[769.44%] ··· Running mem_examples.mem_list                                 2.4k
+[770.83%] ··· Running params_examples.ParamSuite.track_value               1;...
+[772.22%] ··· Running params_examples.TuningTest.time_it             16.00μs;...
+[773.61%] ··· Running params_examples.mem_param                         208 ;...
+[775.00%] ··· Running params_examples.time_skip                       9.48μs;...
+[776.39%] ··· Running params_examples.track_find_test                     failed
+[777.78%] ··· Running params_examples.track_param                         42;...
+[779.17%] ··· Running peakmem_examples.peakmem_list                          15M
+[780.56%] ··· Running subdir.time_subdir.time_foo                        20.13μs
+[781.94%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.65μs
+[783.33%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.10μs
+[784.72%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.96μs
+[786.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.69μs
+[787.50%] ··· Running time_examples.time_with_timeout                     failed
+[788.89%] ··· Running time_examples.time_with_warnings                    failed
+[790.28%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[791.67%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
+[793.06%] ··· Running time_secondary.track_value                            42.0
+[793.06%] ·· Building for py2.7-psutil2.1-six
+[793.06%] ·· Benchmarking py2.7-psutil2.1-six
+[794.44%] ··· Running mem_examples.mem_list                                 2.4k
+[795.83%] ··· Running params_examples.ParamSuite.track_value               1;...
+[797.22%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[798.61%] ··· Running params_examples.mem_param                         208 ;...
+[800.00%] ··· Running params_examples.time_skip                       9.41μs;...
+[801.39%] ··· Running params_examples.track_find_test                     failed
+[802.78%] ··· Running params_examples.track_param                         42;...
+[804.17%] ··· Running peakmem_examples.peakmem_list                          15M
+[805.56%] ··· Running subdir.time_subdir.time_foo                        19.97μs
+[806.94%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.96μs
+[808.33%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.22μs
+[809.72%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.38μs
+[811.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.67μs
+[812.50%] ··· Running time_examples.time_with_timeout                     failed
+[813.89%] ··· Running time_examples.time_with_warnings                    failed
+[815.28%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[816.67%] ··· Running time_secondary.TimeSecondary.time_factorial         6.93μs
+[818.06%] ··· Running time_secondary.track_value                            42.0
+[818.06%] · For asv commit hash 407d8dee:
+[818.06%] ·· Building for py2.7-psutil1.2-six
+[818.06%] ·· Benchmarking py2.7-psutil1.2-six
+[819.44%] ··· Running mem_examples.mem_list                                 2.4k
+[820.83%] ··· Running params_examples.ParamSuite.track_value               1;...
+[822.22%] ··· Running params_examples.TuningTest.time_it             13.00μs;...
+[823.61%] ··· Running params_examples.mem_param                         208 ;...
+[825.00%] ··· Running params_examples.time_skip                      11.02μs;...
+[826.39%] ··· Running params_examples.track_find_test                     failed
+[827.78%] ··· Running params_examples.track_param                         42;...
+[829.17%] ··· Running peakmem_examples.peakmem_list                          15M
+[830.56%] ··· Running subdir.time_subdir.time_foo                        22.34μs
+[831.94%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.67μs
+[833.33%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    12.31μs
+[834.72%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.84μs
+[836.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.89μs
+[837.50%] ··· Running time_examples.time_with_timeout                     failed
+[838.89%] ··· Running time_examples.time_with_warnings                    failed
+[840.28%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[841.67%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
+[843.06%] ··· Running time_secondary.track_value                            42.0
+[843.06%] ·· Building for py2.7-psutil2.1-six
+[843.06%] ·· Benchmarking py2.7-psutil2.1-six
+[844.44%] ··· Running mem_examples.mem_list                                 2.4k
+[845.83%] ··· Running params_examples.ParamSuite.track_value               1;...
+[847.22%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[848.61%] ··· Running params_examples.mem_param                         208 ;...
+[850.00%] ··· Running params_examples.time_skip                       9.39μs;...
+[851.39%] ··· Running params_examples.track_find_test                     failed
+[852.78%] ··· Running params_examples.track_param                         42;...
+[854.17%] ··· Running peakmem_examples.peakmem_list                          15M
+[855.56%] ··· Running subdir.time_subdir.time_foo                        20.77μs
+[856.94%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.82μs
+[858.33%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.84μs
+[859.72%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.79μs
+[861.11%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.76μs
+[862.50%] ··· Running time_examples.time_with_timeout                     failed
+[863.89%] ··· Running time_examples.time_with_warnings                    failed
+[865.28%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[866.67%] ··· Running time_secondary.TimeSecondary.time_factorial         5.82μs
+[868.06%] ··· Running time_secondary.track_value                            42.0
+[868.06%] · Fetching recent changes
+[868.06%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[868.06%] · Creating environments
+[868.06%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[868.06%] · Discovering benchmarks
+[868.06%] ·· Uninstalling from py2.7-psutil1.2-six
+[868.06%] ·· Installing into py2.7-psutil1.2-six
+[868.06%] · Running 2 total benchmarks (1 commits * 2 environments * 1 benchmarks)
+[31250.00%] · For asv commit hash 7ead27ae:
+[31250.00%] ·· Building for py2.7-psutil1.2-six
+[31250.00%] ·· Benchmarking py2.7-psutil1.2-six
+[31300.00%] ··· Running time_secondary.track_value                            42.0
+[31300.00%] ·· Building for py2.7-psutil2.1-six
+[31300.00%] ·· Benchmarking py2.7-psutil2.1-six
+[31350.00%] ··· Running time_secondary.track_value                            42.0
+[31350.00%] · Fetching recent changes
+[31350.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[31350.00%] · Creating environments
+[31350.00%] · No `environment_type` specified in asv.conf.json. This will be required in the future.
+[31350.00%] · Discovering benchmarks
+[31350.00%] ·· Uninstalling from py2.7-psutil1.2-six
+[31350.00%] ·· Installing into py2.7-psutil1.2-six
+[31350.00%] · Running 108 total benchmarks (3 commits * 2 environments * 18 benchmarks)
+[580.56%] · For asv commit hash dfa64edd:
+[580.56%] ·· Building for py2.7-psutil1.2-six
+[580.56%] ·· Benchmarking py2.7-psutil1.2-six
+[581.48%] ··· Running mem_examples.mem_list                                 2.4k
+[582.41%] ··· Running params_examples.ParamSuite.track_value               1;...
+[583.33%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[584.26%] ··· Running params_examples.mem_param                         208 ;...
+[585.19%] ··· Running params_examples.time_skip                       9.91μs;...
+[586.11%] ··· Running params_examples.track_find_test                     failed
+[587.04%] ··· Running params_examples.track_param                         42;...
+[587.96%] ··· Running peakmem_examples.peakmem_list                          15M
+[588.89%] ··· Running subdir.time_subdir.time_foo                        20.02μs
+[589.81%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     9.17μs
+[590.74%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.95μs
+[591.67%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.84μs
+[592.59%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.00μs
+[593.52%] ··· Running time_examples.time_with_timeout                     failed
+[594.44%] ··· Running time_examples.time_with_warnings                    failed
+[595.37%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[596.30%] ··· Running time_secondary.TimeSecondary.time_factorial         5.90μs
+[597.22%] ··· Running time_secondary.track_value                            42.0
+[597.22%] ·· Building for py2.7-psutil2.1-six
+[597.22%] ·· Benchmarking py2.7-psutil2.1-six
+[598.15%] ··· Running mem_examples.mem_list                                 2.4k
+[599.07%] ··· Running params_examples.ParamSuite.track_value               1;...
+[600.00%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[600.93%] ··· Running params_examples.mem_param                         208 ;...
+[601.85%] ··· Running params_examples.time_skip                       9.24μs;...
+[602.78%] ··· Running params_examples.track_find_test                     failed
+[603.70%] ··· Running params_examples.track_param                         42;...
+[604.63%] ··· Running peakmem_examples.peakmem_list                          15M
+[605.56%] ··· Running subdir.time_subdir.time_foo                        20.21μs
+[606.48%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.73μs
+[607.41%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.71μs
+[608.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.79μs
+[609.26%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.35μs
+[610.19%] ··· Running time_examples.time_with_timeout                     failed
+[611.11%] ··· Running time_examples.time_with_warnings                    failed
+[612.04%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[612.96%] ··· Running time_secondary.TimeSecondary.time_factorial         6.05μs
+[613.89%] ··· Running time_secondary.track_value                            42.0
+[613.89%] · For asv commit hash 7ead27ae:
+[613.89%] ·· Building for py2.7-psutil1.2-six
+[613.89%] ·· Benchmarking py2.7-psutil1.2-six
+[614.81%] ··· Running mem_examples.mem_list                                 2.4k
+[615.74%] ··· Running params_examples.ParamSuite.track_value               1;...
+[616.67%] ··· Running params_examples.TuningTest.time_it             14.00μs;...
+[617.59%] ··· Running params_examples.mem_param                         208 ;...
+[618.52%] ··· Running params_examples.time_skip                       9.42μs;...
+[619.44%] ··· Running params_examples.track_find_test                     failed
+[620.37%] ··· Running params_examples.track_param                         42;...
+[621.30%] ··· Running peakmem_examples.peakmem_list                          15M
+[622.22%] ··· Running subdir.time_subdir.time_foo                        20.18μs
+[623.15%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.88μs
+[624.07%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.24μs
+[625.00%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.02μs
+[625.93%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    11.35μs
+[626.85%] ··· Running time_examples.time_with_timeout                     failed
+[627.78%] ··· Running time_examples.time_with_warnings                    failed
+[628.70%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[629.63%] ··· Running time_secondary.TimeSecondary.time_factorial         5.81μs
+[630.56%] ··· Running time_secondary.track_value                            42.0
+[630.56%] ·· Building for py2.7-psutil2.1-six
+[630.56%] ·· Benchmarking py2.7-psutil2.1-six
+[631.48%] ··· Running mem_examples.mem_list                                 2.4k
+[632.41%] ··· Running params_examples.ParamSuite.track_value               1;...
+[633.33%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[634.26%] ··· Running params_examples.mem_param                         208 ;...
+[635.19%] ··· Running params_examples.time_skip                       9.37μs;...
+[636.11%] ··· Running params_examples.track_find_test                     failed
+[637.04%] ··· Running params_examples.track_param                         42;...
+[637.96%] ··· Running peakmem_examples.peakmem_list                          15M
+[638.89%] ··· Running subdir.time_subdir.time_foo                        21.07μs
+[639.81%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.40μs
+[640.74%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.85μs
+[641.67%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.81μs
+[642.59%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.83μs
+[643.52%] ··· Running time_examples.time_with_timeout                     failed
+[644.44%] ··· Running time_examples.time_with_warnings                    failed
+[645.37%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[646.30%] ··· Running time_secondary.TimeSecondary.time_factorial         5.82μs
+[647.22%] ··· Running time_secondary.track_value                            42.0
+[647.22%] · For asv commit hash 407d8dee:
+[647.22%] ·· Building for py2.7-psutil1.2-six
+[647.22%] ·· Benchmarking py2.7-psutil1.2-six
+[648.15%] ··· Running mem_examples.mem_list                                 2.4k
+[649.07%] ··· Running params_examples.ParamSuite.track_value               1;...
+[650.00%] ··· Running params_examples.TuningTest.time_it             15.00μs;...
+[650.93%] ··· Running params_examples.mem_param                         208 ;...
+[651.85%] ··· Running params_examples.time_skip                       9.39μs;...
+[652.78%] ··· Running params_examples.track_find_test                     failed
+[653.70%] ··· Running params_examples.track_param                         42;...
+[654.63%] ··· Running peakmem_examples.peakmem_list                          15M
+[655.56%] ··· Running subdir.time_subdir.time_foo                        20.47μs
+[656.48%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     8.07μs
+[657.41%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    11.00μs
+[658.33%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     7.74μs
+[659.26%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.71μs
+[660.19%] ··· Running time_examples.time_with_timeout                     failed
+[661.11%] ··· Running time_examples.time_with_warnings                    failed
+[662.04%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[662.96%] ··· Running time_secondary.TimeSecondary.time_factorial         5.83μs
+[663.89%] ··· Running time_secondary.track_value                            42.0
+[663.89%] ·· Building for py2.7-psutil2.1-six
+[663.89%] ·· Benchmarking py2.7-psutil2.1-six
+[664.81%] ··· Running mem_examples.mem_list                                 2.4k
+[665.74%] ··· Running params_examples.ParamSuite.track_value               1;...
+[666.67%] ··· Running params_examples.TuningTest.time_it             17.00μs;...
+[667.59%] ··· Running params_examples.mem_param                         208 ;...
+[668.52%] ··· Running params_examples.time_skip                       9.36μs;...
+[669.44%] ··· Running params_examples.track_find_test                     failed
+[670.37%] ··· Running params_examples.track_param                         42;...
+[671.30%] ··· Running peakmem_examples.peakmem_list                          15M
+[672.22%] ··· Running subdir.time_subdir.time_foo                        20.33μs
+[673.15%] ··· Running ..._examples.TimeSuite.time_example_benchmark_1     7.74μs
+[674.07%] ··· Running ..._examples.TimeSuite.time_example_benchmark_2    10.92μs
+[675.00%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_1     8.02μs
+[675.93%] ··· Running ...amples.TimeSuiteSub.time_example_benchmark_2    10.84μs
+[676.85%] ··· Running time_examples.time_with_timeout                     failed
+[677.78%] ··· Running time_examples.time_with_warnings                    failed
+[678.70%] ··· Running time_secondary.TimeSecondary.time_exception         failed
+[679.63%] ··· Running time_secondary.TimeSecondary.time_factorial         6.22μs
+[680.56%] ··· Running time_secondary.track_value                            42.0PASSED
 
+==================================== ERRORS ====================================
+__________________ ERROR collecting test/test_environment.py ___________________
+test/test_environment.py:24: in <module>
+    util.which('python3.4')
+asv/util.py:219: in which
+    raise IOError("Could not find '{0}' in PATH".format(filename))
+E   IOError: Could not find 'python3.4' in PATH
+========== 28 passed, 1 skipped, 1 xfailed, 1 error in 219.24 seconds ==========
